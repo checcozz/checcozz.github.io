@@ -34,16 +34,10 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
+									<h1 id="project-heading"></h1>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+								<div class="image main"><img id="project-image" src="" alt="" /></div>
+								<p id="project-description"></p>
 							</section>
 
 					</div>
@@ -67,10 +61,11 @@
 					"ai": {
 						title1: "AI",
 						title: "Artificial Intelligence",
-						description: "Programming with Python to develop basic Artificial Intelligence systems using common algorithms such as search and machine learning.",
+						description: "Harvard CS50's Introduction to Artificial Intelligence with Python (edX Verified Certificate, January 2024). Through hands-on Python projects I implemented the core ideas behind modern AI: graph search algorithms, knowledge representation and logical inference, probability and uncertainty, optimization, machine learning, neural networks and natural language processing.",
 						image: "images/AI.png"
 					},
 					"capm": {
+						title1: "CAPM",
 						title: "Project Management (CAPM)",
 						description: "Completed CAPM certification for project management, with skills in managing teams, budgeting, and planning.",
 						image: "images/CAPM.png"
@@ -84,6 +79,7 @@
 				if (projectId && projects[projectId]) {
 					document.getElementById('project-title1').innerText = projects[projectId].title1;
 					document.getElementById('project-title').innerText = projects[projectId].title;
+					document.getElementById('project-heading').innerText = projects[projectId].title;
 					document.getElementById('project-description').innerText = projects[projectId].description;
 					document.getElementById('project-image').src = projects[projectId].image;
 				} else {
